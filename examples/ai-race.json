@@ -1,0 +1,10 @@
+{
+  "name": "ai-race",
+  "run": {"mode": "race", "track": "ks_brands_hatch", "layout": "indy", "car": "ks_mazda_mx5_cup",
+          "ai": 9, "ai_level": 95, "laps": 5, "timeout": 1200, "starting_position": 10},
+  "assert": [
+    {"check": "cars_loaded", "min": 10},
+    {"check": "laps_completed", "car": "all", "min": 4},
+    {"check": "no_stuck", "car": "all", "max_seconds": 20}
+  ]
+}

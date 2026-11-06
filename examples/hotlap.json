@@ -1,0 +1,10 @@
+{
+  "name": "hotlap",
+  "run": {"mode": "hotlap", "track": "magione", "car": "bmw_m3_e30", "laps": 3, "timeout": 900},
+  "assert": [
+    {"check": "laps_completed", "car": 0, "min": 3},
+    {"check": "best_lap", "car": 0, "min_ms": 80000, "max_ms": 110000},
+    {"check": "no_stuck", "car": 0, "max_seconds": 10},
+    {"check": "offtrack", "car": 0, "max_seconds": 5}
+  ]
+}

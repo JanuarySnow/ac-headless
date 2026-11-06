@@ -1,0 +1,9 @@
+{
+  "name": "lap-regression",
+  "run": {"mode": "hotlap", "track": "magione", "car": "bmw_m3_e30", "laps": 4, "timeout": 900},
+  "assert": [
+    {"check": "laps_completed", "car": 0, "min": 4},
+    {"check": "lap_time_regression", "car": 0, "baseline": "lap-regression.baseline.json",
+     "tolerance_pct": 0.5}
+  ]
+}
